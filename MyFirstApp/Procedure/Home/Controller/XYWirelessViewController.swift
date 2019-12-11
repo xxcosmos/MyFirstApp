@@ -9,29 +9,29 @@
 import UIKit
 import SwiftyJSON
 import Alamofire
+import Moya
+import RxSwift
+import RxCocoa
+import RxBlocking
+
+enum WustWirelessResult {
+    case success
+    case internalError
+    case noResult
+}
 
 class XYWirelessViewController: XYBaseViewController {
-    private var result:String? {
-        didSet {
-            textLabel?.text = self.result
-        }
-    }
     
-    private var textLabel:UILabel? {
-        didSet {
-            self.textLabel?.layoutIfNeeded()
-        }
-    }
+    private var resultLabel = UILabel()
+    private var wustWirelessResult = WustWirelessResult.noResult
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "免费校园网"
         
-        textLabel = UILabel()
-        textLabel?.text = result
-        textLabel?.font = UIFont.boldSystemFont(ofSize: 15)
-        view.addSubview(textLabel!)
-        textLabel?.snp.makeConstraints({ (make) in
+        resultLabel.font = UIFont.boldSystemFont(ofSize: 15)
+        view.addSubview(resultLabel)
+        resultLabel.snp.makeConstraints({ (make) in
             make.left.equalToSuperview().offset(20)
             make.right.equalToSuperview().offset(-20)
             make.top.equalToSuperview().offset(100)
@@ -49,59 +49,66 @@ class XYWirelessViewController: XYBaseViewController {
         button.snp.makeConstraints { (make) in
             make.left.equalToSuperview().offset(20)
             make.right.equalToSuperview().offset(-20)
-            make.top.equalTo(textLabel!).offset(25)
+            make.top.equalTo(resultLabel).offset(25)
             make.height.equalTo(50)
         }
-        button.addTarget(self, action: #selector(didClickButton), for: .touchUpInside)
+        
+        button.rx.tap.bind { [weak self] in
+            self?.didClickButton()
+        }.disposed(by: disposeBag)
         
     }
     
-    @objc func didClickButton() {
+    func didClickButton() {
         let path = Bundle.main.path(forResource: "available_account", ofType: "json")
-        let json = try! JSON(data: NSData(contentsOfFile: path!) as Data)
-        var isSuccess = false
-        for (_, account):(String, JSON) in json {
-            let response = login(username: account["username"].stringValue, password: account["password"].stringValue)
-            print("response:\(response)")
-            let result = response["result"].stringValue
-            if result == "success" {
-                self.result = account.stringValue
-                isSuccess = true
-                break
-            } else if result == "online" {
-                self.result = response["message"].stringValue
-                isSuccess = true
-                break
+        let accounts = try! JSON(data: NSData(contentsOfFile: path!) as Data)
+        let myQueue = DispatchQueue(label: "myqueue")
+        myQueue.async {
+            for (_, account):(String, JSON) in accounts {
+                self.login(username: account["username"].stringValue, password: account["password"].stringValue)
+                sleep(1)
+                if self.wustWirelessResult == .internalError  || self.wustWirelessResult == .success {
+                    return
+                }
             }
         }
         
-        if !isSuccess {
-            self.result = "当前没有可用账号"
-        }
+        
         
     }
     
-    func login(username: String, password: String) -> JSON {
-        let url = "http://10.200.2.2:9090/zportal/login/do"
-        let headers = ["Content-Type" : "application/x-www-form-urlencoded"]
-        let data = [
-            "username" : username,
-            "pwd" : password,
-            "wlanuserip" : "f09df0ee06255f08c28797b2f2383ef8",
-            "nasip" : "5340d13e4208e1b891476c890b7f5f5c"
-        ]
-        let response =  Alamofire.request(url, method: .post, parameters: data, headers: headers)
-        let json = JSON(data: response.)
-        return json
+
+    func login(username: String, password: String) {
+        print(username,password)
+        let provider = MoyaProvider<XYAPI>()
+        
+        provider.request(.loginToWustWireless(username: username, password: password)) { (result) in
+            switch result {
+            case let .success(moyaResponse):
+                let response = try! JSON(data: moyaResponse.data)
+                print(response)
+                let result = response["result"].stringValue
+                if result == "success" {
+                    self.resultLabel.text = "username:\(username),password:\(password)"
+                    self.wustWirelessResult = .success
+                } else if result == "online" {
+                    self.wustWirelessResult = .success
+                } else {
+                    let message = response["message"].stringValue
+                    if message.contains("内部") {
+                        self.resultLabel.text = message
+                        self.wustWirelessResult = .internalError
+                    }
+                }
+                
+            case let .failure(error):
+                print(error)
+            }
+        }
+     
         
     }
     
-    func showToast(_ message:String?) {
-        let alertVC = UIAlertController(title: "提示", message: message, preferredStyle: .alert)
-        present(alertVC, animated: true, completion: nil)
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
-            alertVC.dismiss(animated: true, completion: nil)
-        }
-    }
+ 
     
 }

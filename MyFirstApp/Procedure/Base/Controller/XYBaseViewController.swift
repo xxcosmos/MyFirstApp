@@ -7,17 +7,26 @@
 //
 
 import UIKit
+import RxSwift
 
 class XYBaseViewController: UIViewController {
-
+    
+    let disposeBag = DisposeBag()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         view.backgroundColor = UIColor.white
 //        edgesForExtendedLayout = UIRectEdge(rawValue: 0)
     
     }
     
+    func showToast(_ message:String?) {
+         let alertVC = UIAlertController(title: "提示", message: message, preferredStyle: .alert)
+         present(alertVC, animated: true, completion: nil)
+         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
+             alertVC.dismiss(animated: true, completion: nil)
+         }
+     }
 
     /*
     // MARK: - Navigation
