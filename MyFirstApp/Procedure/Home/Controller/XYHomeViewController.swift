@@ -8,68 +8,55 @@
 
 import UIKit
 import SnapKit
-class XYHomeViewController: XYBaseViewController, UITableViewDataSource, UITableViewDelegate {
+import RxSwift
+import RxCocoa
+
+struct CellModel {
+    var name: String
+    var page: XYBaseViewController
+}
+
+class XYHomeViewController: XYBaseViewController {
     
-    var tableView: UITableView
-    var items = ["免费校园网","查询学生已选课程"] {
-        didSet {
-            self.tableView.reloadData()
-        }
-    }
-    
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        tableView = UITableView(frame: .zero, style: .plain)
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        
-        
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+    var tableView:UITableView!
+    let items = Observable.just([
+        CellModel(name: "免费校园网", page: XYWirelessViewController()),
+        CellModel(name: "查询已选课程", page: XYChosenCourseViewController()),
+    ])
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupView()
         
-    }
-    
-    func setupView() {
-        tableView.dataSource = self
-        tableView.delegate = self
+        tableView = UITableView()
         tableView.tableFooterView = UIView()
+        
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         view.addSubview(tableView)
         tableView.snp.makeConstraints { (make) in
             make.edges.equalToSuperview()
         }
         
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCell(withIdentifier: "cell")
-        if cell == nil {
-            cell = UITableViewCell(style: .subtitle, reuseIdentifier: "cell")
-        }
-        cell?.textLabel?.text = items[indexPath.row]
+        items.bind(to: tableView.rx.items) { (tableView, row, element) in
+            let cell  = tableView.dequeueReusableCell(withIdentifier: "Cell")
+            cell?.textLabel?.text = "\(row+1): \(element.name)"
+            return cell!
+        }.disposed(by: disposeBag)
         
-        return cell!
+        tableView.rx.modelSelected(CellModel.self).subscribe(onNext: { (cellModel) in
+            self.navigationController?.pushViewController(cellModel.page, animated: true)
+            }).disposed(by: disposeBag)
+       
+        
+//        Observable.zip(tableView.rx.itemSelected, tableView.rx.modelSelected(String.self)).bind {[weak self] indexPath, item in
+//            self?.showToast("hello")
+//            print("选中的 indexPath 为\(indexPath.row)，选中的 item 为\(item)")
+//        }.disposed(by: disposeBag)
+        
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        switch indexPath.row {
-        case 0:
-            
-            navigationController?.pushViewController(XYWirelessViewController(), animated: true)
-        default:
-            navigationController?.pushViewController(XYChosenCourseViewController(), animated: true)
-        }
-    }
+    
     
     
 }

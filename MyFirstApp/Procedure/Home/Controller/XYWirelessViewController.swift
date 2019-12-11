@@ -72,9 +72,6 @@ class XYWirelessViewController: XYBaseViewController {
                 }
             }
         }
-        
-        
-        
     }
     
 
@@ -105,10 +102,6 @@ class XYWirelessViewController: XYBaseViewController {
                 print(error)
             }
         }
-     
-        
     }
-    
- 
     
 }
