@@ -16,24 +16,19 @@ struct CellModel {
 
 class XYHomeViewController: XYBaseViewController {
     
-    let items = [
+    private let items = [
         CellModel(name: "免费校园网", page: XYWirelessViewController()),
         CellModel(name: "学校通知", page: WUSTNoticeBaseController()),
         CellModel(name: "演出列表", page: ShowStartViewController()),
         CellModel(name: "端口扫描", page: XYNetWorkController()),
+        CellModel(name: "武科教务", page: JwcController()),
     ]
     
-    private lazy var tableView : UITableView = {
-        let table = UITableView(frame: CGRect(x: 0, y: 0, width: ScreenWidth, height: ScreenHeight - TabBarHeight), style: .plain)
-        table.backgroundColor = .white
-        table.delegate = self
-        table.dataSource = self
-        
-        table.separatorStyle = .singleLine
-        table.register(cellType: XYBaseTableCell.self)
-        
-        return table
-    }()
+    private lazy var tableView = UITableView().then {
+        $0.delegate = self
+        $0.dataSource = self
+        $0.register(cellType: XYBaseTableCell.self)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,6 +51,7 @@ extension XYHomeViewController: UITableViewDelegate, UITableViewDataSource {
         cell.textLabel?.text = items[indexPath.row].name
         return cell
     }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 40
     }

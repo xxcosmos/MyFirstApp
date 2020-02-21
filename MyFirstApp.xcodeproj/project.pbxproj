@@ -42,7 +42,6 @@
 		6E6DB8E6239E1D1500076049 /* XYHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6DB8E5239E1D1500076049 /* XYHomeViewController.swift */; };
 		6E6DB8EC239E21E500076049 /* XYMineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6DB8EB239E21E500076049 /* XYMineViewController.swift */; };
 		6E6DB8F0239E2FF300076049 /* XYWirelessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6DB8EF239E2FF300076049 /* XYWirelessViewController.swift */; };
-		6E6DB8F2239E30F600076049 /* XYChosenCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6DB8F1239E30F600076049 /* XYChosenCourseViewController.swift */; };
 		6E6DB8F5239E35AE00076049 /* available_account.json in Resources */ = {isa = PBXBuildFile; fileRef = 6E6DB8F4239E35AD00076049 /* available_account.json */; };
 		6E6DB8F8239E90C300076049 /* XYAcademicAffairAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6DB8F7239E90C300076049 /* XYAcademicAffairAPI.swift */; };
 		6E93731E23F57D0A006CBFAB /* BaiduMapAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E93731D23F57D0A006CBFAB /* BaiduMapAPI.swift */; };
@@ -54,6 +53,15 @@
 		6E97F44123E4757900CFCA5B /* WUSTNoticeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E97F44023E4757900CFCA5B /* WUSTNoticeModel.swift */; };
 		6E97F44323E4793800CFCA5B /* WUSTNoticeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E97F44223E4793800CFCA5B /* WUSTNoticeCell.swift */; };
 		6E9D62D223E4596C00F6DF74 /* ShowStartCityButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9D62D123E4596C00F6DF74 /* ShowStartCityButton.swift */; };
+		6EBB0DDF240050AB004AD461 /* JwcGradeInterfaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBB0DDE240050AB004AD461 /* JwcGradeInterfaceView.swift */; };
+		6ED96AB12400098E00D696A5 /* JwcAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED96AB02400098E00D696A5 /* JwcAPI.swift */; };
+		6ED96AB32400369800D696A5 /* JwcModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED96AB22400369800D696A5 /* JwcModel.swift */; };
+		6ED96AB7240039B100D696A5 /* JwcViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED96AB6240039B100D696A5 /* JwcViewModel.swift */; };
+		6ED96AB924003E5D00D696A5 /* JwcController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED96AB824003E5D00D696A5 /* JwcController.swift */; };
+		6ED96ABB2400414500D696A5 /* JwcGradeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED96ABA2400414500D696A5 /* JwcGradeController.swift */; };
+		6ED96ABD2400417F00D696A5 /* JwcChosenCourseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED96ABC2400417F00D696A5 /* JwcChosenCourseController.swift */; };
+		6ED96ABF2400419300D696A5 /* JwcCreditController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED96ABE2400419300D696A5 /* JwcCreditController.swift */; };
+		6ED96AC1240045ED00D696A5 /* JwcGradeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED96AC0240045ED00D696A5 /* JwcGradeCell.swift */; };
 		6EE33BE923E34A7E004E9A43 /* XYSafariViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE33BE823E34A7E004E9A43 /* XYSafariViewController.swift */; };
 		6EEB28E823AF385C00647771 /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEB28E723AF385C00647771 /* AppConstant.swift */; };
 		6EEF950723E35E0300BBA1BE /* ShowStartCityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EEF950623E35E0300BBA1BE /* ShowStartCityController.swift */; };
@@ -104,7 +112,6 @@
 		6E6DB8E5239E1D1500076049 /* XYHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XYHomeViewController.swift; sourceTree = "<group>"; };
 		6E6DB8EB239E21E500076049 /* XYMineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XYMineViewController.swift; sourceTree = "<group>"; };
 		6E6DB8EF239E2FF300076049 /* XYWirelessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XYWirelessViewController.swift; sourceTree = "<group>"; };
-		6E6DB8F1239E30F600076049 /* XYChosenCourseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XYChosenCourseViewController.swift; sourceTree = "<group>"; };
 		6E6DB8F4239E35AD00076049 /* available_account.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = available_account.json; sourceTree = "<group>"; };
 		6E6DB8F7239E90C300076049 /* XYAcademicAffairAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XYAcademicAffairAPI.swift; sourceTree = "<group>"; };
 		6E93731D23F57D0A006CBFAB /* BaiduMapAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiduMapAPI.swift; sourceTree = "<group>"; };
@@ -117,6 +124,15 @@
 		6E97F44023E4757900CFCA5B /* WUSTNoticeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WUSTNoticeModel.swift; sourceTree = "<group>"; };
 		6E97F44223E4793800CFCA5B /* WUSTNoticeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WUSTNoticeCell.swift; sourceTree = "<group>"; };
 		6E9D62D123E4596C00F6DF74 /* ShowStartCityButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowStartCityButton.swift; sourceTree = "<group>"; };
+		6EBB0DDE240050AB004AD461 /* JwcGradeInterfaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JwcGradeInterfaceView.swift; sourceTree = "<group>"; };
+		6ED96AB02400098E00D696A5 /* JwcAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JwcAPI.swift; sourceTree = "<group>"; };
+		6ED96AB22400369800D696A5 /* JwcModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JwcModel.swift; sourceTree = "<group>"; };
+		6ED96AB6240039B100D696A5 /* JwcViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JwcViewModel.swift; sourceTree = "<group>"; };
+		6ED96AB824003E5D00D696A5 /* JwcController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JwcController.swift; sourceTree = "<group>"; };
+		6ED96ABA2400414500D696A5 /* JwcGradeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JwcGradeController.swift; sourceTree = "<group>"; };
+		6ED96ABC2400417F00D696A5 /* JwcChosenCourseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JwcChosenCourseController.swift; sourceTree = "<group>"; };
+		6ED96ABE2400419300D696A5 /* JwcCreditController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JwcCreditController.swift; sourceTree = "<group>"; };
+		6ED96AC0240045ED00D696A5 /* JwcGradeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JwcGradeCell.swift; sourceTree = "<group>"; };
 		6EE33BE823E34A7E004E9A43 /* XYSafariViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XYSafariViewController.swift; sourceTree = "<group>"; };
 		6EEB28E723AF385C00647771 /* AppConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstant.swift; sourceTree = "<group>"; };
 		6EEF950623E35E0300BBA1BE /* ShowStartCityController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowStartCityController.swift; sourceTree = "<group>"; };
@@ -144,17 +160,6 @@
 				5CF9CEB78EDE4EC172412D2D /* Pods-MyFirstApp.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		6E2944B823F7C20D006ED05D /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				6E6DB8F1239E30F600076049 /* XYChosenCourseViewController.swift */,
-				6E97F43823E463B700CFCA5B /* WUSTNoticeController.swift */,
-				6E97F43A23E464E100CFCA5B /* WUSTNoticeBaseController.swift */,
-				6E353B4E23F6E89600743CB0 /* WUSTNoticeDetailController.swift */,
-			);
-			path = Controller;
 			sourceTree = "<group>";
 		};
 		6E34D37123D58E3B00850B44 /* ShowStart */ = {
@@ -261,6 +266,7 @@
 				6E6DB8E5239E1D1500076049 /* XYHomeViewController.swift */,
 				6EF98B0E23FBD06400B4D975 /* NetWorkHomework */,
 				6EE33BEB23E34C75004E9A43 /* WirelessWUST */,
+				6ED96AB52400397800D696A5 /* WUSTJwc */,
 				6EE33BEC23E34CE9004E9A43 /* AboutWUST */,
 				6E34D37123D58E3B00850B44 /* ShowStart */,
 			);
@@ -316,6 +322,59 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		6EBB0DE024008DD6004AD461 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6ED96AC0240045ED00D696A5 /* JwcGradeCell.swift */,
+				6EBB0DDE240050AB004AD461 /* JwcGradeInterfaceView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6ED96AB42400392700D696A5 /* WUSTNotice */ = {
+			isa = PBXGroup;
+			children = (
+				6ED96AC32400461500D696A5 /* Controller */,
+				6E97F43E23E474F800CFCA5B /* WUSTNoticeViewModel.swift */,
+				6E97F44023E4757900CFCA5B /* WUSTNoticeModel.swift */,
+				6E97F44223E4793800CFCA5B /* WUSTNoticeCell.swift */,
+			);
+			path = WUSTNotice;
+			sourceTree = "<group>";
+		};
+		6ED96AB52400397800D696A5 /* WUSTJwc */ = {
+			isa = PBXGroup;
+			children = (
+				6ED96AC2240045FD00D696A5 /* Controller */,
+				6EBB0DE024008DD6004AD461 /* View */,
+				6ED96AB02400098E00D696A5 /* JwcAPI.swift */,
+				6ED96AB22400369800D696A5 /* JwcModel.swift */,
+				6ED96AB6240039B100D696A5 /* JwcViewModel.swift */,
+			);
+			path = WUSTJwc;
+			sourceTree = "<group>";
+		};
+		6ED96AC2240045FD00D696A5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6ED96AB824003E5D00D696A5 /* JwcController.swift */,
+				6ED96ABA2400414500D696A5 /* JwcGradeController.swift */,
+				6ED96ABC2400417F00D696A5 /* JwcChosenCourseController.swift */,
+				6ED96ABE2400419300D696A5 /* JwcCreditController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6ED96AC32400461500D696A5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6E97F43823E463B700CFCA5B /* WUSTNoticeController.swift */,
+				6E97F43A23E464E100CFCA5B /* WUSTNoticeBaseController.swift */,
+				6E353B4E23F6E89600743CB0 /* WUSTNoticeDetailController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		6EE33BEA23E34BED004E9A43 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -341,10 +400,7 @@
 			isa = PBXGroup;
 			children = (
 				6E6DB8F7239E90C300076049 /* XYAcademicAffairAPI.swift */,
-				6E2944B823F7C20D006ED05D /* Controller */,
-				6E97F43E23E474F800CFCA5B /* WUSTNoticeViewModel.swift */,
-				6E97F44023E4757900CFCA5B /* WUSTNoticeModel.swift */,
-				6E97F44223E4793800CFCA5B /* WUSTNoticeCell.swift */,
+				6ED96AB42400392700D696A5 /* WUSTNotice */,
 			);
 			path = AboutWUST;
 			sourceTree = "<group>";
@@ -533,9 +589,11 @@
 				6EF98B1023FBD0A200B4D975 /* InterfaceView.swift in Sources */,
 				6EE33BE923E34A7E004E9A43 /* XYSafariViewController.swift in Sources */,
 				6E97F44123E4757900CFCA5B /* WUSTNoticeModel.swift in Sources */,
+				6ED96ABD2400417F00D696A5 /* JwcChosenCourseController.swift in Sources */,
 				6E166AAA23F4251B002AB787 /* ShowStartSearchController.swift in Sources */,
 				6E34D36C23D57BFB00850B44 /* WRNavigationBar.swift in Sources */,
 				6E97F44323E4793800CFCA5B /* WUSTNoticeCell.swift in Sources */,
+				6ED96AB924003E5D00D696A5 /* JwcController.swift in Sources */,
 				6EEF950A23E37A1100BBA1BE /* ShowStartCityViewModel.swift in Sources */,
 				6E166AAE23F430EB002AB787 /* ShowStartSearchHistoryCell.swift in Sources */,
 				6E166AB223F43382002AB787 /* XYBaseTableCell.swift in Sources */,
@@ -543,11 +601,15 @@
 				6E34D36A23D57AB500850B44 /* XYNavigationController.swift in Sources */,
 				6E6DB8F8239E90C300076049 /* XYAcademicAffairAPI.swift in Sources */,
 				6E43FCCC23F7E8DE00F5741C /* ShowStartBannerModel.swift in Sources */,
+				6ED96AC1240045ED00D696A5 /* JwcGradeCell.swift in Sources */,
 				6E419E2923F535C9009EEAD0 /* ShowStartSearchBar.swift in Sources */,
+				6EBB0DDF240050AB004AD461 /* JwcGradeInterfaceView.swift in Sources */,
+				6ED96AB32400369800D696A5 /* JwcModel.swift in Sources */,
 				6E353B4B23F6675E00743CB0 /* PageTitleView.swift in Sources */,
 				6E166ABC23F4822F002AB787 /* ShowStartSearchHeader.swift in Sources */,
 				6E6DB8E4239E1BEB00076049 /* XYBaseViewController.swift in Sources */,
 				6EEB28E823AF385C00647771 /* AppConstant.swift in Sources */,
+				6ED96AB12400098E00D696A5 /* JwcAPI.swift in Sources */,
 				6E93731E23F57D0A006CBFAB /* BaiduMapAPI.swift in Sources */,
 				6E9D62D223E4596C00F6DF74 /* ShowStartCityButton.swift in Sources */,
 				6E95679C23D96E0900BE76D4 /* XYShowStartViewModel.swift in Sources */,
@@ -556,21 +618,23 @@
 				6E34D36E23D57C0D00850B44 /* WRCustomNavigationBar.swift in Sources */,
 				6E166AB823F4580F002AB787 /* XYTabBarController.swift in Sources */,
 				6E6DB8C3239E114100076049 /* AppDelegate.swift in Sources */,
-				6E6DB8F2239E30F600076049 /* XYChosenCourseViewController.swift in Sources */,
 				6E34D37323D59AC500850B44 /* XYShowStartAPI.swift in Sources */,
 				6E353B4F23F6E89600743CB0 /* WUSTNoticeDetailController.swift in Sources */,
 				6EF98B0C23FBBFEF00B4D975 /* XYNetWorkController.swift in Sources */,
 				6E6DB8F0239E2FF300076049 /* XYWirelessViewController.swift in Sources */,
+				6ED96ABF2400419300D696A5 /* JwcCreditController.swift in Sources */,
 				6E6DB8EC239E21E500076049 /* XYMineViewController.swift in Sources */,
 				6E353B4D23F6821400743CB0 /* PageContentView.swift in Sources */,
 				6E2944BA23F7C9BA006ED05D /* XYWebViewController.swift in Sources */,
 				6E97F43B23E464E100CFCA5B /* WUSTNoticeBaseController.swift in Sources */,
 				6E419E2B23F555AB009EEAD0 /* R.generated.swift in Sources */,
 				6EEF950723E35E0300BBA1BE /* ShowStartCityController.swift in Sources */,
+				6ED96AB7240039B100D696A5 /* JwcViewModel.swift in Sources */,
 				6E353B4723F6647C00743CB0 /* PageStyle.swift in Sources */,
 				6E166AB423F44C2E002AB787 /* ShowStartSearchModel.swift in Sources */,
 				6E97F43923E463B700CFCA5B /* WUSTNoticeController.swift in Sources */,
 				6E6DB8E6239E1D1500076049 /* XYHomeViewController.swift in Sources */,
+				6ED96ABB2400414500D696A5 /* JwcGradeController.swift in Sources */,
 				6E166ABE23F49BEC002AB787 /* XYCollectionLayout.swift in Sources */,
 				6E11041323CD634A00FCAD8F /* ShowStartViewController.swift in Sources */,
 				6E166AB623F44D71002AB787 /* ShowStartSearchViewModel.swift in Sources */,

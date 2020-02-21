@@ -33,4 +33,5 @@ target 'MyFirstApp' do
   # Socket
   pod 'Socket.IO-Client-Swift'
   pod 'SwiftSocket'
+  pod "STRegex"
 end

@@ -10,8 +10,6 @@ import UIKit
 
 class WUSTNoticeBaseController: XYBaseViewController {
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,15 +29,7 @@ class WUSTNoticeBaseController: XYBaseViewController {
         
         let pageView = XYPageView(frame: CGRect(x: 0, y: NavBarHeight, width: ScreenWidth, height: ScreenHeight - NavBarHeight - 30), style: style, titles: titles, children: viewControllers)
         
-        pageView.delegate = self
         view.addSubview(pageView)
     }
-    
-}
-
-extension WUSTNoticeBaseController: PageViewDelegate {
-    func pageView(_ pageView: XYPageView, didShowAt index: Int) {
-    }
-    
     
 }

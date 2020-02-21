@@ -10,7 +10,7 @@ import UIKit
 
 public class PageStyle {
     
-    public var titleViewHeight: CGFloat = 44
+    public var titleViewHeight: CGFloat = 25
     public var titleColor: UIColor = .black
     public var titleSelectedColor: UIColor = .blue
     public var titleFont: UIFont = .systemFont(ofSize: 15)
@@ -28,7 +28,7 @@ public class PageStyle {
     
     /// title  缩放
     public var isTitleScaleEnabled = true
-    public var titleMaximumScaleFactor: CGFloat = 1.2
+    public var titleMaximumScaleFactor: CGFloat = 1.5
     
     public var isShowCoverView = true
     public var coverViewBackgroundColor: UIColor = .black

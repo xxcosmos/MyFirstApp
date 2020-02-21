@@ -56,7 +56,7 @@ class WUSTNoticeController: XYBaseViewController {
 
     
     func getData(isReload: Bool) {
-        viewModel.updataBlock = { [unowned self] in
+        viewModel.getNoticeBlock = { [unowned self] in
             if isReload {
                 self.tableView.uHead.endRefreshing()
             } else {
