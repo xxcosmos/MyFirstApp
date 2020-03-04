@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SwiftSocket
 import SVProgressHUD
 class XYNetWorkController: XYBaseViewController {
     
@@ -159,8 +158,10 @@ class XYNetWorkController: XYBaseViewController {
     }
     
     func getConnect(host: String, port: Int, timeout: Int) -> Bool {
-        let client = TCPClient(address: host, port: Int32(port))
-        return client.connect(timeout: timeout).isSuccess
+//        let client = TCPClient(address: host, port: Int32(port))
+//        return client.connect(timeout: timeout).isSuccess
+        
+        return false
     }
     
     

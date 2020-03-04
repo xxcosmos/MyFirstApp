@@ -32,6 +32,7 @@ target 'MyFirstApp' do
   pod 'Then'
   # Socket
   pod 'Socket.IO-Client-Swift'
-  pod 'SwiftSocket'
+ # pod 'SwiftSocket'
   pod "STRegex"
+  pod 'IQKeyboardManagerSwift'
 end
