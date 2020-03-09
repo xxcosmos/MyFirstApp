@@ -89,12 +89,10 @@ struct R: Rswift.Validatable {
   }
 
   #if os(iOS) || os(tvOS)
-  /// This `R.storyboard` struct is generated, and contains static references to 2 storyboards.
+  /// This `R.storyboard` struct is generated, and contains static references to 1 storyboards.
   struct storyboard {
     /// Storyboard `LaunchScreen`.
     static let launchScreen = _R.storyboard.launchScreen()
-    /// Storyboard `Main`.
-    static let main = _R.storyboard.main()
 
     #if os(iOS) || os(tvOS)
     /// `UIStoryboard(name: "LaunchScreen", bundle: ...)`
@@ -103,43 +101,70 @@ struct R: Rswift.Validatable {
     }
     #endif
 
-    #if os(iOS) || os(tvOS)
-    /// `UIStoryboard(name: "Main", bundle: ...)`
-    static func main(_: Void = ()) -> UIKit.UIStoryboard {
-      return UIKit.UIStoryboard(resource: R.storyboard.main)
-    }
-    #endif
-
     fileprivate init() {}
   }
   #endif
 
-  /// This `R.file` struct is generated, and contains static references to 1 files.
-  struct file {
-    /// Resource file `available_account.json`.
-    static let available_accountJson = Rswift.FileResource(bundle: R.hostingBundle, name: "available_account", pathExtension: "json")
-
-    /// `bundle.url(forResource: "available_account", withExtension: "json")`
-    static func available_accountJson(_: Void = ()) -> Foundation.URL? {
-      let fileResource = R.file.available_accountJson
-      return fileResource.bundle.url(forResource: fileResource)
-    }
-
-    fileprivate init() {}
-  }
-
-  /// This `R.image` struct is generated, and contains static references to 5 images.
+  /// This `R.image` struct is generated, and contains static references to 22 images.
   struct image {
+    /// Image `Location`.
+    static let location = Rswift.ImageResource(bundle: R.hostingBundle, name: "Location")
+    /// Image `Transparent`.
+    static let transparent = Rswift.ImageResource(bundle: R.hostingBundle, name: "Transparent")
     /// Image `home_selected`.
     static let home_selected = Rswift.ImageResource(bundle: R.hostingBundle, name: "home_selected")
     /// Image `home`.
     static let home = Rswift.ImageResource(bundle: R.hostingBundle, name: "home")
+    /// Image `inwust`.
+    static let inwust = Rswift.ImageResource(bundle: R.hostingBundle, name: "inwust")
     /// Image `mine_selected`.
     static let mine_selected = Rswift.ImageResource(bundle: R.hostingBundle, name: "mine_selected")
     /// Image `mine`.
     static let mine = Rswift.ImageResource(bundle: R.hostingBundle, name: "mine")
+    /// Image `nav_search`.
+    static let nav_search = Rswift.ImageResource(bundle: R.hostingBundle, name: "nav_search")
+    /// Image `play`.
+    static let play = Rswift.ImageResource(bundle: R.hostingBundle, name: "play")
+    /// Image `pullToRefresh_0_80x60_`.
+    static let pullToRefresh_0_80x60_ = Rswift.ImageResource(bundle: R.hostingBundle, name: "pullToRefresh_0_80x60_")
+    /// Image `pullToRefresh_1_80x60_`.
+    static let pullToRefresh_1_80x60_ = Rswift.ImageResource(bundle: R.hostingBundle, name: "pullToRefresh_1_80x60_")
+    /// Image `pullToRefresh_2_80x60_`.
+    static let pullToRefresh_2_80x60_ = Rswift.ImageResource(bundle: R.hostingBundle, name: "pullToRefresh_2_80x60_")
+    /// Image `pullToRefresh_3_80x60_`.
+    static let pullToRefresh_3_80x60_ = Rswift.ImageResource(bundle: R.hostingBundle, name: "pullToRefresh_3_80x60_")
+    /// Image `pullToRefresh_4_80x60_`.
+    static let pullToRefresh_4_80x60_ = Rswift.ImageResource(bundle: R.hostingBundle, name: "pullToRefresh_4_80x60_")
+    /// Image `pullToRefresh_5_80x60_`.
+    static let pullToRefresh_5_80x60_ = Rswift.ImageResource(bundle: R.hostingBundle, name: "pullToRefresh_5_80x60_")
+    /// Image `pullToRefresh_6_80x60_`.
+    static let pullToRefresh_6_80x60_ = Rswift.ImageResource(bundle: R.hostingBundle, name: "pullToRefresh_6_80x60_")
+    /// Image `pullToRefresh_7_80x60_`.
+    static let pullToRefresh_7_80x60_ = Rswift.ImageResource(bundle: R.hostingBundle, name: "pullToRefresh_7_80x60_")
+    /// Image `pullToRefresh_8_80x60_`.
+    static let pullToRefresh_8_80x60_ = Rswift.ImageResource(bundle: R.hostingBundle, name: "pullToRefresh_8_80x60_")
+    /// Image `pullToRefresh_9_80x60_`.
+    static let pullToRefresh_9_80x60_ = Rswift.ImageResource(bundle: R.hostingBundle, name: "pullToRefresh_9_80x60_")
+    /// Image `search_history_delete`.
+    static let search_history_delete = Rswift.ImageResource(bundle: R.hostingBundle, name: "search_history_delete")
     /// Image `signature`.
     static let signature = Rswift.ImageResource(bundle: R.hostingBundle, name: "signature")
+    /// Image `video`.
+    static let video = Rswift.ImageResource(bundle: R.hostingBundle, name: "video")
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "Location", bundle: ..., traitCollection: ...)`
+    static func location(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.location, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "Transparent", bundle: ..., traitCollection: ...)`
+    static func transparent(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.transparent, compatibleWith: traitCollection)
+    }
+    #endif
 
     #if os(iOS) || os(tvOS)
     /// `UIImage(named: "home", bundle: ..., traitCollection: ...)`
@@ -152,6 +177,13 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "home_selected", bundle: ..., traitCollection: ...)`
     static func home_selected(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.home_selected, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "inwust", bundle: ..., traitCollection: ...)`
+    static func inwust(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.inwust, compatibleWith: traitCollection)
     }
     #endif
 
@@ -170,9 +202,107 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "nav_search", bundle: ..., traitCollection: ...)`
+    static func nav_search(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.nav_search, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "play", bundle: ..., traitCollection: ...)`
+    static func play(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.play, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "pullToRefresh_0_80x60_", bundle: ..., traitCollection: ...)`
+    static func pullToRefresh_0_80x60_(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.pullToRefresh_0_80x60_, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "pullToRefresh_1_80x60_", bundle: ..., traitCollection: ...)`
+    static func pullToRefresh_1_80x60_(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.pullToRefresh_1_80x60_, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "pullToRefresh_2_80x60_", bundle: ..., traitCollection: ...)`
+    static func pullToRefresh_2_80x60_(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.pullToRefresh_2_80x60_, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "pullToRefresh_3_80x60_", bundle: ..., traitCollection: ...)`
+    static func pullToRefresh_3_80x60_(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.pullToRefresh_3_80x60_, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "pullToRefresh_4_80x60_", bundle: ..., traitCollection: ...)`
+    static func pullToRefresh_4_80x60_(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.pullToRefresh_4_80x60_, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "pullToRefresh_5_80x60_", bundle: ..., traitCollection: ...)`
+    static func pullToRefresh_5_80x60_(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.pullToRefresh_5_80x60_, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "pullToRefresh_6_80x60_", bundle: ..., traitCollection: ...)`
+    static func pullToRefresh_6_80x60_(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.pullToRefresh_6_80x60_, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "pullToRefresh_7_80x60_", bundle: ..., traitCollection: ...)`
+    static func pullToRefresh_7_80x60_(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.pullToRefresh_7_80x60_, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "pullToRefresh_8_80x60_", bundle: ..., traitCollection: ...)`
+    static func pullToRefresh_8_80x60_(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.pullToRefresh_8_80x60_, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "pullToRefresh_9_80x60_", bundle: ..., traitCollection: ...)`
+    static func pullToRefresh_9_80x60_(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.pullToRefresh_9_80x60_, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "search_history_delete", bundle: ..., traitCollection: ...)`
+    static func search_history_delete(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.search_history_delete, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "signature", bundle: ..., traitCollection: ...)`
     static func signature(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.signature, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "video", bundle: ..., traitCollection: ...)`
+    static func video(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.video, compatibleWith: traitCollection)
     }
     #endif
 
@@ -205,9 +335,6 @@ struct _R: Rswift.Validatable {
       #if os(iOS) || os(tvOS)
       try launchScreen.validate()
       #endif
-      #if os(iOS) || os(tvOS)
-      try main.validate()
-      #endif
     }
 
     #if os(iOS) || os(tvOS)
@@ -218,22 +345,7 @@ struct _R: Rswift.Validatable {
       let name = "LaunchScreen"
 
       static func validate() throws {
-        if #available(iOS 11.0, tvOS 11.0, *) {
-        }
-      }
-
-      fileprivate init() {}
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    struct main: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
-      typealias InitialController = ViewController
-
-      let bundle = R.hostingBundle
-      let name = "Main"
-
-      static func validate() throws {
+        if UIKit.UIImage(named: "inwust", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'inwust' is used in storyboard 'LaunchScreen', but couldn't be loaded.") }
         if #available(iOS 11.0, tvOS 11.0, *) {
         }
       }
