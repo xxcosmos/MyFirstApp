@@ -16,7 +16,7 @@ class ShowStartVideoController: XYBaseViewController {
         let layout = UICollectionViewFlowLayout()
         layout.minimumLineSpacing = 20
         layout.minimumInteritemSpacing = 10
-        layout.itemSize = CGSize(width: ScreenWidth * 0.9, height: ScreenHeight/2)
+        layout.itemSize = CGSize(width: ScreenWidth * 0.9, height: ScreenHeight/2 - 60)
         let view = UICollectionView(frame: SafeBounds, collectionViewLayout: layout)
         view.delegate = self
         view.dataSource = self
