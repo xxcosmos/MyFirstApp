@@ -22,21 +22,21 @@
 
 仿写 PageView
 
-<img src="assets/Simulator Screen Shot - iPhone 8 - 2020-03-08 at 11.56.41.png" style="zoom:67%;" />
+<img src="assets/Simulator Screen Shot - iPhone 8 - 2020-03-08 at 11.56.41.png" style="zoom: 50%;" />
 
 ### 秀动主页
 
-<img src="assets/showstart-main.png" alt="秀动主页" style="zoom:67%;" />
+<img src="assets/showstart-main.png" alt="秀动主页" style="zoom: 50%;" />
 
 ### 搜索页面
 
-<img src="assets/Simulator Screen Shot - iPhone 8 - 2020-03-08 at 12.07.02.png" alt="搜索页面" style="zoom:67%;" />
+<img src="assets/Simulator Screen Shot - iPhone 8 - 2020-03-08 at 12.07.02.png" alt="搜索页面" style="zoom: 50%;" />
 
 ### 选择城市页面
 
 使用 Block 传值。
 
-<img src="assets/Simulator Screen Shot - iPhone 8 - 2020-03-08 at 12.07.30.png" style="zoom:67%;" />
+<img src="assets/Simulator Screen Shot - iPhone 8 - 2020-03-08 at 12.07.30.png" style="zoom: 50%;" />
 
 ### 视频列表页面
 
@@ -44,4 +44,4 @@ AVFoundation
 
 简单地封装了自己的 VideoPlayer，单例。
 
-<img src="assets/Simulator Screen Shot - iPhone 8 - 2020-03-09 at 11.42.24.png" style="zoom:67%;" />
+<img src="assets/Simulator Screen Shot - iPhone 8 - 2020-03-09 at 11.42.24.png" style="zoom: 50%;" />
