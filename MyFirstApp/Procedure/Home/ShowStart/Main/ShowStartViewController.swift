@@ -29,15 +29,17 @@ class ShowStartViewController: XYBaseViewController {
         }
     }
     
-    private lazy var cityButton = UIButton().then { (button) in
+    private lazy var cityButton = UIButton(type: .system).then { (button) in
+        button.frame = CGRect(x:0, y:0, width:65, height:30)
         button.setImage(R.image.location(), for: .normal)
-        button.imageView?.contentMode = .scaleAspectFit
-        button.backgroundColor = .red
-        button.imageEdgeInsets = UIEdgeInsets(top: 5, left: -15, bottom: 5, right: 15)
-//        button.titleEdgeInsets = UIEdgeInsets(top: 0, left: -100, bottom: 0, right: 100)
-        button.widthAnchor.constraint(equalToConstant: 60).isActive = true
-        button.heightAnchor.constraint(equalToConstant: 30).isActive = true
         button.setTitleColor(.black, for: .normal)
+        button.imageView?.contentMode = .scaleAspectFit
+        button.titleLabel?.font = .systemFont(ofSize: 11)
+        button.titleLabel?.backgroundColor = .red
+        button.setTitle("ddd", for: .normal)
+        button.imageEdgeInsets = UIEdgeInsets(top: 3, left: -15, bottom: 3, right: 15)
+//        button.titleEdgeInsets = UIEdgeInsets(top: 0, left: -10, bottom: 0, right: 10)
+
         button.addTarget(self, action: #selector(tappedCityButton), for: .touchUpInside)
     }
     
@@ -55,7 +57,7 @@ class ShowStartViewController: XYBaseViewController {
         self.navigationController?.pushViewController(ShowStartVideoController(), animated: true)
     }
     
-    private lazy var searchButton =  ShowStartSearchBarButton().then {
+    private lazy var searchButton =  ShowStartSearchBarButton(frame: CGRect(x: 0, y: 0, width: ScreenWidth - 100, height: 30)).then {
         $0.addTarget(self, action: #selector(searchAction), for: .touchUpInside)
     }
     
@@ -100,10 +102,19 @@ class ShowStartViewController: XYBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.addSubview(self.tableView)
-        
+        title = "首页"
         navigationItem.titleView = searchButton
-        let videoBarItem = UIBarButtonItem(image: R.image.nav_search(), style: .plain, target: self, action: #selector(tappedVideoButton))
+        searchButton.snp.makeConstraints { (make) in
+            make.width.equalTo(200)
+            make.height.equalTo(30)
+        }
+        let videoBarItem = UIBarButtonItem(image: R.image.video()?.withTintColor(.gray), style: .plain, target: self, action: #selector(tappedVideoButton))
+        let titleItem = UIBarButtonItem(title: "杭州", style: .plain, target: nil, action: nil)
         let cityBarItem = UIBarButtonItem(customView: cityButton)
+        cityButton.snp.makeConstraints { (make) in
+            make.width.equalTo(60)
+            make.height.equalTo(30)
+        }
         navigationItem.rightBarButtonItems = [videoBarItem, cityBarItem]
         
         locationManager.delegate = self

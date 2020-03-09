@@ -44,7 +44,6 @@
 		6E6DB8E6239E1D1500076049 /* XYHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6DB8E5239E1D1500076049 /* XYHomeViewController.swift */; };
 		6E6DB8EC239E21E500076049 /* XYMineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6DB8EB239E21E500076049 /* XYMineViewController.swift */; };
 		6E6DB8F0239E2FF300076049 /* XYWirelessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6DB8EF239E2FF300076049 /* XYWirelessViewController.swift */; };
-		6E6DB8F5239E35AE00076049 /* available_account.json in Resources */ = {isa = PBXBuildFile; fileRef = 6E6DB8F4239E35AD00076049 /* available_account.json */; };
 		6E6DB8F8239E90C300076049 /* XYAcademicAffairAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6DB8F7239E90C300076049 /* XYAcademicAffairAPI.swift */; };
 		6E93731E23F57D0A006CBFAB /* BaiduMapAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E93731D23F57D0A006CBFAB /* BaiduMapAPI.swift */; };
 		6E95679C23D96E0900BE76D4 /* XYShowStartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E95679B23D96E0900BE76D4 /* XYShowStartViewModel.swift */; };
@@ -126,7 +125,6 @@
 		6E6DB8E5239E1D1500076049 /* XYHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XYHomeViewController.swift; sourceTree = "<group>"; };
 		6E6DB8EB239E21E500076049 /* XYMineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XYMineViewController.swift; sourceTree = "<group>"; };
 		6E6DB8EF239E2FF300076049 /* XYWirelessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XYWirelessViewController.swift; sourceTree = "<group>"; };
-		6E6DB8F4239E35AD00076049 /* available_account.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = available_account.json; sourceTree = "<group>"; };
 		6E6DB8F7239E90C300076049 /* XYAcademicAffairAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XYAcademicAffairAPI.swift; sourceTree = "<group>"; };
 		6E93731D23F57D0A006CBFAB /* BaiduMapAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiduMapAPI.swift; sourceTree = "<group>"; };
 		6E93731F23F5867B006CBFAB /* MyFirstApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyFirstApp-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -349,7 +347,6 @@
 			children = (
 				6E419E2A23F555AB009EEAD0 /* R.generated.swift */,
 				6E6DB8CB239E114500076049 /* Assets.xcassets */,
-				6E6DB8F4239E35AD00076049 /* available_account.json */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -636,7 +633,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E6DB8F5239E35AE00076049 /* available_account.json in Resources */,
 				6E6DB8CF239E114500076049 /* LaunchScreen.storyboard in Resources */,
 				6E6DB8CC239E114500076049 /* Assets.xcassets in Resources */,
 			);
